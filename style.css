@@ -103,8 +103,6 @@ body {
 }
 
 .nav-mobile {
-    justify-content: space-between;
-    flex-direction: column;
     position: fixed;
     height: 100vh;
     top: 0;
