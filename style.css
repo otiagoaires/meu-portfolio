@@ -817,8 +817,9 @@ body {
     .footer-col {
         flex: 100%;
         justify-items: center;
-        min-width: 400px;
+        min-width: 510px;
         margin-bottom: 20px;
+
     }
     .footer-col > ul {
         justify-items: center;
