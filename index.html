@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <link rel="icon" href="images/T.ico" type="img/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Meu Portfólio</title>
 </head>
 
@@ -23,11 +27,12 @@
                 </ul>
             </nav>
 
-            <button class="menu-toggle" aria-label=""><i class="fas fa-bars"></i></button>
+            <button id="menu-toggle" class="menu-toggle" aria-label=""><i class="fas fa-bars"></i></button>
 
             <nav class="nav-mobile">
                 <ul>
-                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#inicio">
+                        <img src="" alt="">Início</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#sobre">Sobre</a></li>
@@ -110,6 +115,7 @@
             <div class="container">
                 <h2 class="section-title">Meu portfólio</h2>
                 <p class="section-subtitle">Confira alguns dos projetos que já realizei utilizando HTML, CSS, JS e WordPress</p>
+                <p style="margin-top: -20px; margin-bottom: 20px;">(Clique na imagem para ver completo)</p>
         
                 <div class="portfolio-grid">
                     
@@ -331,23 +337,10 @@
             <div class="contato-container">
                 <!-- Título -->
                 <h2 class="section-title">Entre em Contato</h2>
-                <p class="section-subtitle">Preencha o formulário ou use os canais diretos.</p>
         
-                <div class="contato-conteudo">
-                    <!-- Formulário -->
-                    <form class="contato-form">
-                        <input type="text" placeholder="Seu nome" required>
-                        <input type="email" placeholder="Seu e-mail" required>
-                        <textarea placeholder="Sua mensagem" rows="5" required></textarea>
-                        <button type="submit" class="contato-botao">Enviar Mensagem</button>
-                    </form>
-        
+                <div class="contato-conteudo">                   
                     <!-- Informações de Contato (lado direito) -->
                     <div class="contato-info">
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Rua Exemplo, 123 - Rio Branco, AC</p>
-                        </div>
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
                             <p>otiagoaires@gmail.com</p>
@@ -408,17 +401,11 @@
                     <i class="fab fa-whatsapp"></i>WhatsApp</a></li>
             </ul>
         </div>
-        <!--Coluna 4-->
-        <div class="footer-col">
-            <h3>Newsletter</h3>
-            <input type="email" placeholder="Seu e-mail">
-            <button class="footer-btn">Inscrever-se</button> <br>
-            <a href="#inicio" class="footer-backtop">
-                <i class="fa-solid fa-arrow-up"></i>Voltar ao Topo</a></li>
-        </div>
-
+        <a href="#inicio" class="footer-backtop">
+            <i class="fa-solid fa-circle-up"></i>Voltar ao Topo</a>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>

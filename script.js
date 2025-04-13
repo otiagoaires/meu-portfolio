@@ -155,3 +155,26 @@ document.querySelectorAll('.faq-question').forEach(button => {
         item.classList.toggle('active');
     });
 });
+
+
+
+const menuBtn = document.getElementById('menu-toggle');
+const navMobile = document.getElementById('nav-mobile');
+
+menuBtn.addEventListener('click', () => {
+    navMobile.classList.toggle('active');
+});
+
+// Fecha o menu ao clicar em um link
+document.querySelectorAll('.nav-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMobile.classList.remove('active');
+    });
+});
+
+// Fecha ao clicar fora
+document.addEventListener('click', (e) => {
+    if (!navMobile.contains(e.target) && !menuBtn.contains(e.target)) {
+        navMobile.classList.remove('active');
+    }
+});

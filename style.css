@@ -8,10 +8,10 @@ html {
     --secondary-color: #48A9A6;
     --dark-color: #1e293b;
     --dark-color2: #b8860b;
-    --light-color: #ffffff;
+    --light-color: #ececec;
     --gray-color: #727a86;
     --success-color: #10b981;
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-main: 'Poppins', sans-serif;
 }
 
 * {
@@ -90,41 +90,58 @@ body {
 
 
 .menu-toggle {
-    margin-left: 5%;
     display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
     background: none;
     border: none;
-    font-size: 24px;
     color: var(--text-color);
     cursor: pointer;
+    z-index: 1001;
 }
 
 .nav-mobile {
-    transition: all 0.3s ease;
-    display: none;
     position: fixed;
-    top: 70px;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background: white;
+    padding-top: 80px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-mobile.active {
     left: 0;
-    width: 100%;
-    border-radius: 7px;
-    background: var(--gray-color);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    padding: 20px 0;
 }
 
 .nav-mobile ul {
+    font-weight: 500;
+    margin-left: 50px;
     list-style: none;
-    text-align: center;
+    padding: 0;
+    text-align: left;
 }
 
 .nav-mobile li {
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .nav-mobile a {
+    transition-duration: .2s;
     color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
+    border-radius: 7px;
+    padding: 10px;
+}
+.nav-mobile a:hover {
+    background-color: var(--gray-color);
+    color: white;
 }
 
 
@@ -550,26 +567,28 @@ body {
 
 /* Footer */
 .footer {
+    height: auto;
     padding: 40px 40px;
-    margin: 0 auto;
     background-color: var(--dark-color);
     color: white;
     display: flex;
-    flex-wrap: wrap; /* Quebra em telas pequenas */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    justify-items: center;
+    gap: 20px;
 }
 
 .footer-col {
-    flex: 1; /* Distribui igualmente */
+    flex: 1;
     min-width: 200px; /* Largura mínima por coluna */
     margin-bottom: 20px;
 }
 
 .footer-col h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #f39c12;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .footer-col ul {
@@ -581,52 +600,50 @@ body {
     transition: all 0.3s ease;
     color: #ecf0f1;
     text-decoration: none;
-    display: block;
-    margin-bottom: 8px;
+    display: inline;
+}
+.footer-col li {
+    margin-top: 10px;
 }
 
 .footer-col ul li a:hover {
     color: #f39c12;
 }
 
-.footer-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: 10px white;
-    padding: 8px 15px;
-    border-radius: 7px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    transition: all 0.3s ease;
-}
-
-.footer-btn:hover {
-    background-color: var(--dark-color2);
-}
-.footer-btn:active {
-    transform: translateY(3px);
-}
-
-
 .footer-backtop {
+    font-weight: 500;
     transition: all 0.3s ease;
     text-decoration: none;
-    color: white;
-    font-size: 20px;
+    background-color: #b8860b;
+    border-radius: 50px;
+    padding: 0px 15px 10px 0px;
+    color: var(--light-color);
+    font-size: 17px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    height: 50px;
 }
 
 .footer-backtop i {
+    border-radius: 50px;
     margin-right: 10px;
-    border-radius: 300px;
-    color: white;
-    font-size: 35px;  
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 .footer-backtop i:hover {
-    color: #b8860b;
+    color: var(--dark-color);
+    
+}
+.footer-backtop:hover i {
+    color: var(--dark-color);
+    transform: translateY(-5px);
 }
 .footer-backtop:hover {
-    color: #b8860b;
+    background-color: white;
+    color: var(--dark-color);
+    transform: translateY(-10px);
 }
 
 
@@ -636,13 +653,6 @@ body {
     margin-right: 10px;
 }
 
-input[type="email"] {
-    padding: 14px;
-    width: 100%;
-    margin-bottom: 10px;
-    border: 1px var(--dark-color);
-    border-radius: 7px;
-}
 .social-btn-footer {
     display: inline-flex;
     align-items: center;
@@ -662,9 +672,6 @@ input[type="email"] {
 .social-btn-footer:hover {
     color: #b8860b !important;
 }
-
-
-
 
 /* Estilos Gerais */
 .contato { 
@@ -694,44 +701,10 @@ input[type="email"] {
     justify-content: space-between;
 }
 
-/* Formulário */
-.contato-form {
-    flex: 1;
-    min-width: 300px;
-}
 
-.contato-form input,
-.contato-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-}
 
-.contato-form textarea {
-    resize: vertical;
-}
-
-.contato-botao {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    width: 100%;
-}
-
-.contato-botao:hover {
-    background-color: var(--dark-color2);
-}
-
-/* Informações de Contato */
 .contato-info {
+    justify-items: center;
     flex: 1;
     min-width: 300px;
     background: white;
@@ -777,12 +750,6 @@ input[type="email"] {
 
 
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .footer-col {
-        flex: 100%; /* 1 coluna em telas pequenas */
-    }
-}
 
 /* Responsivo */
 @media (min-width: 1024px) {
@@ -806,7 +773,13 @@ input[type="email"] {
         padding: 20px 0;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     }
-
+    .footer-col {
+        flex: 100%;
+        justify-items: center;
+    }
+    .footer-col > ul {
+        justify-items: center;
+    }
     .nav-list.active {
         display: flex;
     }
