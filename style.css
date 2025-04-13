@@ -121,7 +121,7 @@ body {
 
 .nav-mobile ul {
     font-weight: 500;
-    margin-left: 50px;
+    margin-left: 35px;
     list-style: none;
     padding: 0;
     text-align: left;
@@ -130,19 +130,23 @@ body {
 .nav-mobile li {
     margin: 20px 0;
 }
+.nav-mobile i {
+    margin-right: 12px;
+}
 
 .nav-mobile a {
     transition-duration: .2s;
-    color: var(--text-color);
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 18px;
     border-radius: 7px;
-    padding: 10px;
+    padding: 7px;
 }
 .nav-mobile a:hover {
     background-color: var(--gray-color);
     color: white;
 }
+
 
 
 /* Hero Section */
@@ -553,8 +557,10 @@ body {
     animation-play-state: running;
 }
 .botao-zap {
-    box-shadow: 0 0 15px rgba(37, 211, 102, 0.5); /* Verde do WhatsApp */
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.3); /* Verde do WhatsApp */
 }
+
+
 
 @keyframes botao-zap {
     0%, 100% { transform: scale(1); }
@@ -817,6 +823,10 @@ body {
     }
     .about-image img {
         transform: scale(0.8);
+    }
+    .header.scrolled {
+        background-color: transparent;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
     }
 }
 
