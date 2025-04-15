@@ -35,13 +35,12 @@ body {
     top: 0;
     z-index: 999;
     transition: background-color 0.3s, color 0.3s;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .header .nav-desktop a {
     color: #1e293b;
     text-decoration: none;
-    margin-left: 30px;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -56,17 +55,18 @@ body {
 .nav-desktop ul {
     justify-content: center;
     display: flex;
-    gap: 30px;
+    gap: 60px;
     list-style: none;
 }
 .nav-desktop a {
     color: var(--light-color);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     transition: color 0.3s;
     position: relative;
-    padding: 10px;
+    padding: 0px;
+    margin-left: 0;
 }
 .nav-desktop a:hover {
     color: var(--dark-color2);
@@ -147,7 +147,52 @@ body {
     color: white;
 }
 
+/* Citações */
+.citacoes {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    padding: 15px;
+    background-color: #48a9a600;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
 
+    & img {
+        width: 180px;
+        border-radius: 7px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
+    }
+}
+.cita {
+    justify-content: center;
+    align-items: center;
+
+    & h3 {
+        width: auto;
+        margin-bottom: 5px;
+        display: block;
+        color: var(--dark-color);
+        font-weight: 600;
+    }
+    & h3::after {
+        content: '';
+        display: block;
+        min-width: 50%;
+        height: 2px;
+        background: var(--primary-color);
+        margin: 0;
+    }
+
+    & p {
+        margin-top: 3px;
+        max-width: 450px;
+        font-size: 1.1em;
+        font-style: italic;
+    }
+}
 
 /* Hero Section */
 .hero {
@@ -716,7 +761,7 @@ body {
 
 /* Estilos Gerais */
 .contato { 
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgb(30, 41, 59, 0.6));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(30, 41, 59, 0.137));
     background-size: cover;
     background-color: #f9f9f9;
     padding: 60px 20px;
