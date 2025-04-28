@@ -146,6 +146,9 @@ body {
     color: white;
 }
 
+.topo {
+    justify-content: space-between;
+}
 
 /* Hero Section */
 .hero {
@@ -488,7 +491,7 @@ body {
 }
 
 .service-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-4px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.09);
 
 }
@@ -547,6 +550,27 @@ body {
     transform: translateY(-5px);
 }
 .btn2:active {
+    transform: translateY(1px);
+}
+
+.btn3 {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    padding: 12px 30px;
+    border: 2px solid var(--dark-color);
+    background: none;
+    color: var(--dark-color);
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: all 0.3s, transform 0.3s;
+}
+.btn3:hover {
+    background: var(--dark-color2);
+}
+.btn3:active {
     transform: translateY(1px);
 }
 
@@ -809,8 +833,6 @@ body {
     justify-content: space-between;
 }
 
-
-
 .contato-info {
     justify-items: center;
     flex: 1;
@@ -894,7 +916,9 @@ body {
     .nav-list.active {
         display: flex;
     }
-
+    .btn3 {
+        display: block;
+    }
     .menu-mobile {
         display: block;
     }
@@ -930,12 +954,63 @@ body {
         transform: scale(0.8);
     }
     .header.scrolled {
-        background-color: transparent;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+        background-color: var(--success-color);
+        height: 70px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
     }
     .footer-backtop {
         bottom: 0;
         right: 0;
+    }
+
+    /* Citações mobile */
+    #quotes {
+        margin: 20px 0;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .citacoes-right {
+        text-align: right;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        align-content: center;
+        justify-content: right;
+        justify-items: center;
+        gap: 15px;
+
+        img {
+            width: 140px;
+            border-radius: 7px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
+        }
+    }
+    .citacoes-left {
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 90px 0;
+        align-items: center;
+        align-content: center;
+        justify-content: left;
+        justify-items: center;
+        gap: 15px;
+        
+
+        img {
+            width: 140px;
+            border-radius: 7px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
+        }
+    }
+    .cita {
+        p {
+            margin-top: 3px;
+            max-width: 450px;
+            font-size: 1em;
+            font-style: italic;
+        }
     }
 }
 
