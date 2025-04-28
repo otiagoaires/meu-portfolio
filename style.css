@@ -202,7 +202,7 @@ body {
 .citacoes-right {
     text-align: right;
     display: flex;
-    padding: 10px;
+    padding: 6px;
     align-items: center;
     align-content: center;
     justify-content: right;
@@ -218,7 +218,7 @@ body {
 .citacoes-left {
     display: flex;
     flex-direction: row-reverse;
-    padding: 10px;
+    padding: 6px;
     align-items: center;
     align-content: center;
     justify-content: left;
@@ -972,24 +972,23 @@ body {
     .citacoes-right {
         text-align: right;
         display: flex;
-        padding: 10px;
+        padding: 5px;
         align-items: center;
         align-content: center;
         justify-content: right;
         justify-items: center;
         gap: 15px;
 
-        img {
+        & img {
             width: 140px;
             border-radius: 7px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
         }
     }
     .citacoes-left {
-        padding-bottom: 20px;
         display: flex;
         flex-direction: row-reverse;
-        padding: 90px 0;
+        padding: 100px 0;
         align-items: center;
         align-content: center;
         justify-content: left;
@@ -997,7 +996,7 @@ body {
         gap: 15px;
         
 
-        img {
+        & img {
             width: 140px;
             border-radius: 7px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
@@ -1007,8 +1006,11 @@ body {
         p {
             margin-top: 3px;
             max-width: 450px;
-            font-size: 1em;
+            font-size: 0.95em;
             font-style: italic;
+        }
+        & h3 {
+            font-size: 1.1em;
         }
     }
 }
