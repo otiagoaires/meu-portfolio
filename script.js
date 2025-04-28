@@ -3,18 +3,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-mobile');
     
-    menuBtn.addEventListener('click', function() {
-        navList.classList.toggle('active');
-        
-        // Altera o ícone do botão
-        const icon = this.querySelector('i');
-        if (navList.classList.contains('active')) {
+    // Função para atualizar o ícone do menu
+    function updateMenuIcon(isActive) {
+        const icon = menuBtn.querySelector('i');
+        if (isActive) {
             icon.classList.remove('fa-bars');
             icon.classList.add('fa-times');
         } else {
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
         }
+    }
+    
+    // Toggle menu ao clicar no botão
+    menuBtn.addEventListener('click', function() {
+        navList.classList.toggle('active');
+        updateMenuIcon(navList.classList.contains('active'));
     });
     
     // Fecha o menu ao clicar em um link
@@ -22,10 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             navList.classList.remove('active');
-            const icon = menuBtn.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            updateMenuIcon(false);
         });
+    });
+    
+    // Fecha ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (!navList.contains(e.target) && !menuBtn.contains(e.target)) {
+            navList.classList.remove('active');
+            updateMenuIcon(false);
+        }
     });
     
     // Efeito de scroll suave para links internos
@@ -94,36 +104,16 @@ document.addEventListener('DOMContentLoaded', function() {
     animateOnScroll();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMobile = document.querySelector('.nav-mobile');
-    
-    menuToggle.addEventListener('click', function() {
-        navMobile.classList.toggle('active');
-        
-        // Altera o ícone
-        const icon = this.querySelector('i');
-        if (navMobile.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.add('fa-bars');
-            icon.classList.remove('fa-times');
-        }
+// Portfolio items click handler
+document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.addEventListener('click', () => {
+        window.open(item.querySelector('img').src, '_blank');
     });
 });
 
-
-document.querySelectorAll('.portfolio-item').forEach(item => {
-    item.addEventListener('click', () => {
-      window.open(item.querySelector('img').src, '_blank');
-    });
-  });
-
-
+// Header scroll effect
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".header");
-
     window.addEventListener("scroll", function () {
         if (window.scrollY > 200) { 
             header.classList.add("scrolled");
@@ -133,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// FAQ accordion
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
         const item = button.closest('.faq-item');
@@ -151,29 +142,6 @@ document.querySelectorAll('.faq-question').forEach(button => {
         
         item.classList.toggle('active');
     });
-});
-
-
-const menuBtn = document.getElementById('menu-toggle');
-const navMobile = document.getElementById('nav-mobile');
-
-menuBtn.addEventListener('click', () => {
-    navMobile.classList.toggle('active');
-});
-
-// Fecha o menu ao clicar em um link
-document.querySelectorAll('.nav-mobile a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMobile.classList.remove('active');
-    });
-});
-
-// Fecha ao clicar fora
-document.addEventListener('click', (e) => {
-    if (!navMobile.contains(e.target) && !menuBtn.contains(e.target)) {
-        navMobile.classList.remove('active');
-        
-    }
 });
 
 
