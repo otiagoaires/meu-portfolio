@@ -91,7 +91,7 @@ body {
 .menu-toggle {
     display: none;
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 20px;
     font-size: 30px;
     background: none;
@@ -232,11 +232,7 @@ body {
     }
 }
 .cita {
-    margin: 0;
-    padding: 0;
-    
-
-    & h3 {
+    h3 {
         width: auto;
         margin-bottom: 5px;
         display: block;
@@ -491,6 +487,7 @@ body {
 }
 
 .service-card:hover {
+    cursor: pointer;
     transform: translateY(-4px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.09);
 
@@ -556,9 +553,9 @@ body {
 .btn3 {
     display: none;
     position: fixed;
-    top: 10px;
+    top: 5px;
     right: 20px;
-    padding: 12px 30px;
+    padding: 8px 30px;
     border: 2px solid var(--dark-color);
     background: none;
     color: var(--dark-color);
@@ -568,7 +565,9 @@ body {
     transition: all 0.3s, transform 0.3s;
 }
 .btn3:hover {
-    background: var(--dark-color2);
+    background: #b8860b;
+    color: white;
+    
 }
 .btn3:active {
     transform: translateY(1px);
@@ -955,7 +954,7 @@ body {
     }
     .header.scrolled {
         background-color: var(--success-color);
-        height: 70px;
+        height: 52px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
     }
     .footer-backtop {
