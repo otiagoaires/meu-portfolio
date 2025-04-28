@@ -154,7 +154,6 @@ document.querySelectorAll('.faq-question').forEach(button => {
 });
 
 
-
 const menuBtn = document.getElementById('menu-toggle');
 const navMobile = document.getElementById('nav-mobile');
 
@@ -173,5 +172,8 @@ document.querySelectorAll('.nav-mobile a').forEach(link => {
 document.addEventListener('click', (e) => {
     if (!navMobile.contains(e.target) && !menuBtn.contains(e.target)) {
         navMobile.classList.remove('active');
+        
     }
 });
+
+
