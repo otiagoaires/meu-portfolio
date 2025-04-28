@@ -436,7 +436,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 50px 20px;
     justify-content: center;
     align-items: center;
 }
@@ -635,7 +635,6 @@ body {
 }
 
 .botao-zap {
-    gap: 10px;
     will-change: transform;
     font-size: 20px;
     font-weight: 600;
@@ -645,13 +644,11 @@ body {
     background-color: var(--primary-color);
     color: white;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.1s;
     animation: botao-zap 1.5s infinite !important;
     animation-play-state: running;
 }
-.botao-zap {
-    box-shadow: 0 0 15px rgba(37, 211, 102, 0.3); /* Verde do WhatsApp */
-}
+
 .bottom-menu {
     position: absolute;
     bottom: 0px;
@@ -678,7 +675,7 @@ body {
 
 @keyframes botao-zap {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); } /* Reduza a escala para 1.05 (mais sutil) */
+    50% { transform: scale(1.05); } 
 }
 
 .botao-zap {
@@ -961,6 +958,10 @@ body {
     .footer-backtop {
         bottom: 0;
         right: 0;
+    }
+    .container2 > .section-title {
+        font-size: 1.5em;
+
     }
 
     /* Citações mobile */
