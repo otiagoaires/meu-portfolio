@@ -430,6 +430,7 @@ body {
     align-items: center;
 }
 .container2 {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     display: flex;
     flex-direction: column;
     width: 100%;

@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Animação ao rolar a página (Intersection Observer)
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.service-card, .section-title');
+        const elements = document.querySelectorAll('.service-card, .hero, .section-title, .citacoes-right, .citacoes-left, .portfolio, .portfolio-item, .botao-zap, .contato-conteudo, .info-item i, .contato-redes a, .faq-columns, .faq-item, .about, .about p, .about-image img, .social-btn i');
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -81,12 +81,12 @@ document.addEventListener('DOMContentLoaded', function() {
     style.textContent = `
         .hide {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s, transform 0.6s;
+            transform: translateY(50px);
+            transition: opacity 0.6s, transform 1s;
         }
         .animate {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0px);
         }
     `;
     document.head.appendChild(style);
