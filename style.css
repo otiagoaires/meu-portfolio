@@ -309,18 +309,17 @@ body {
     align-items: center;
     gap: 10px;
     padding: 7px;
-    background: var(--primary-color);
-    color: white !important;
+    color: var(--dark-color) !important;
     border-radius: 7px;
     text-decoration: none;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-    will-change: transform;
+    transition: transform 0.2s ease-in-out;
+    will-change: transform, color;
+    box-shadow: 0 4px 12px rgba(165, 165, 165, 0.3);
   }
   
   .social-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(165, 165, 165, 0.3);
+    transform: translateY(-6px);
+    color: var(--success-color) !important;
   }
   
   .social-btn i {
@@ -920,9 +919,6 @@ body {
         display: flex;
     }
     .btn3 {
-        display: block;
-    }
-    .menu-mobile {
         display: block;
     }
 

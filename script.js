@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Menu mobile
-    const menuBtn = document.querySelector('.menu-mobile');
-    const navList = document.querySelector('.nav-list');
+    const menuBtn = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-mobile');
     
     menuBtn.addEventListener('click', function() {
         navList.classList.toggle('active');
@@ -114,14 +114,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 document.querySelectorAll('.portfolio-item').forEach(item => {
     item.addEventListener('click', () => {
       window.open(item.querySelector('img').src, '_blank');
     });
   });
-
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
