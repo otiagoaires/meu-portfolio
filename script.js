@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     style.textContent = `
         .hide {
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(30px);
             transition: opacity 0.6s, transform 1s;
         }
         .animate {
