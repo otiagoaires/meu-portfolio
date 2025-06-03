@@ -1,0 +1,49 @@
+/* Ativar contraste alto */
+body.contraste-ativo * {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+img.contraste-ativo {
+    background-color: #fff !important;
+}
+
+/* Texto geral */
+body.contraste-ativo p,
+body.contraste-ativo h1,
+body.contraste-ativo h2,
+body.contraste-ativo h3,
+body.contraste-ativo span,
+body.contraste-ativo a {
+  color: #fff !important;
+}
+
+/* Borda e sombra no contraste */
+body.contraste-ativo .service-card,
+body.contraste-ativo .caixa,
+body.contraste-ativo .conteudo {
+  background-color: #000000 !important;
+  border: 1px solid #ffffff1a !important;
+  box-shadow: 0 0 7px #fff !important;
+}
+
+/* Botões */
+body.contraste-ativo button {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}
+
+/* Links */
+body.contraste-ativo a {
+  color: rgb(126, 255, 255) !important;
+}
+
+/* Imagens: evitar sumir */
+body.contraste-ativo img {
+  background-color: #fff !important;
+}
+
+body.contraste-ativo :focus {
+  outline: 3px dashed #ff0;
+  outline-offset: 4px;
+}

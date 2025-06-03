@@ -144,4 +144,24 @@ document.querySelectorAll('.faq-question').forEach(button => {
     });
 });
 
+function alternarContraste() {
+    document.body.classList.toggle('contraste-ativo');
+}
+
+
+
+let lastScroll = 0;
+const menu = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll) {
+    menu.classList.add('hidden');
+  } else {
+    menu.classList.remove('hidden');
+  }
+
+  lastScroll = currentScroll;
+});
 
