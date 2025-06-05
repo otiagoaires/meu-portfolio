@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// FAQ accordion
+// FAQ accordion - verificar se funciona para menu feito em código.
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
         const item = button.closest('.faq-item');
@@ -149,7 +149,7 @@ function alternarContraste() {
 }
 
 
-
+// menu que some e aparece ao scroll
 let lastScroll = 0;
 const menu = document.querySelector('.header');
 
