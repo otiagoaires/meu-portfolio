@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Fecha ao clicar fora
     document.addEventListener('click', (e) => {
         if (!navList.contains(e.target) && !menuBtn.contains(e.target)) {
             navList.classList.remove('active');
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Efeito de scroll suave para links internos
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -55,8 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Adiciona classe ao header quando scrollar
+
     window.addEventListener('scroll', function() {
         const header = document.querySelector('.header');
         if (window.scrollY > 50) {
@@ -66,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Animação ao rolar a página (Intersection Observer)
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.service-card, .hero, .section-title, .citacoes-right, .citacoes-left, .portfolio, .portfolio-item, .botao-zap, .contato-conteudo, .info-item i, .contato-redes a, .faq-columns, .faq-item, .about, .about p, .about-image img, .social-btn i');
         
